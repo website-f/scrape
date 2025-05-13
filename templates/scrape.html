@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scraped Data</title>
+</head>
+<body>
+    <h2>Scraped Catalog Data</h2>
+    <table border="1">
+        <tr>
+          <th>Type</th>
+          <th>Weight</th>
+          <th>Grade</th>
+          <th>Reserve Price (Bid +100)</th>
+          <th>Gold Price per Gram</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+          <td>{{ row.type }}</td>
+          <td>{{ row.weight }}</td>
+          <td>{{ row.grade }}</td>
+          <td>{{ row.reserve_price }}</td>
+          <td>{{ row.gold_price_per_gram }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      
+</body>
+</html>
