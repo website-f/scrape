@@ -216,9 +216,9 @@ def bid_item(index):
         cards[index].click()
         time.sleep(3)
 
-        bid_price = reserve_price + 10
-        driver.find_element(By.ID, "bidPrice").clear()
-        driver.find_element(By.ID, "bidPrice").send_keys(str(round(bid_price, 2)))
+        # bid_price = reserve_price + 10
+        # driver.find_element(By.ID, "bidPrice").clear()
+        # driver.find_element(By.ID, "bidPrice").send_keys(str(round(bid_price, 2)))
         driver.find_element(By.XPATH, "//button[contains(text(), 'Bid')]").click()
         time.sleep(1)
         driver.find_element(By.XPATH, "//button[contains(text(), 'Confirm')]").click()
